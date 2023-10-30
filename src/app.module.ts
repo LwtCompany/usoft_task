@@ -1,11 +1,16 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { ConfigModule } from './config/config.module';
-import { AppLoggerModule } from "./logger/logger.module";
+import { UsersModule } from './users/users.module';
+import { DatabaseModule } from "./db/knex.module";
+import { GuardModule } from "./guard/guard.module";
+import { OrganizationsModule } from './organizations/organizations.module';
+import { OrganizationUserModule } from './organization-user/organization-user.module';
+import { ProjectModule } from './project/project.module';
+import { TaskModule } from './task/task.module';
+
 @Module({
-  imports: [ConfigModule, AppLoggerModule],
-  controllers: [AppController],
+  imports: [ UsersModule, DatabaseModule, GuardModule, OrganizationsModule, OrganizationUserModule, ProjectModule, TaskModule],
+  controllers: [],
   providers: [AppService],
 })
 export class AppModule {}

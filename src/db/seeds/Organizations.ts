@@ -9,17 +9,17 @@ export async function seed(knex: Knex): Promise<void> {
         {
             id: 1,
             name: 'Usoft',
-            created_by: 2
+            created_by: 1
         },
         {
             id: 2,
             name: 'UniSoft',
-            created_by: 2
+            created_by: 1
         },
         {
             id: 3,
             name: 'BdmGroup',
-            created_by: 2
+            created_by: 1
         }
     ]);
 }
